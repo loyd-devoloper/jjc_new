@@ -1,0 +1,20 @@
+{
+  "resources/css/app.css": {
+<<<<<<< HEAD
+    "file": "assets/app-Bl-AvtNL.css",
+=======
+    "file": "assets/app-BlmxJvQJ.css",
+>>>>>>> 23de0a095fea35548f8fc1033a8e20ba5ba04f1b
+    "src": "resources/css/app.css",
+    "isEntry": true
+  },
+  "resources/js/app.js": {
+    "file": "assets/app-CMfC3q7K.js",
+    "name": "app",
+    "src": "resources/js/app.js",
+    "isEntry": true,
+    "css": [
+      "assets/app-v2Sj8WLY.css"
+    ]
+  }
+}
