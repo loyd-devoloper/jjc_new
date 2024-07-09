@@ -84,7 +84,7 @@ class OrdersResource extends Resource
 
                     $items = OrderItem::with('productInfo')->where('order_id', $record->id)->get();
                     $customerInfo = Customer::where('id',$record->customer_id)->first();
-                    return view('filament.pages.customer-table', ['records' => $items,'customer'=>$customerInfo]);
+                    return view('filament.pages.customer-table', ['records' => $items,'customer'=>$customerInfo,'record'=>$record]);
                 }),
                 Tables\Actions\EditAction::make()->label('Change Status')
                 ->color(Color::Green)

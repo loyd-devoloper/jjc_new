@@ -13,6 +13,9 @@
     <p>
         <span>Address</span>: <span class="font-bold">{{ $customer?->address }}</span>
     </p>
+    <p>
+        <span>Date of purchase</span>: <span class="font-bold">{{ \Carbon\Carbon::parse($record?->created_at)->format('M d,Y h:m:s A') }}</span>
+    </p>
 </div>
 <div class="relative overflow-x-auto">
     <table class="w-full text-sm text-left rtl:text-right text-gray-500 ">

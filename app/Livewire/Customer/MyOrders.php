@@ -107,7 +107,7 @@ class MyOrders extends Component implements HasForms, HasTable
                     ViewAction::make()->label('View Items')->modalContent(function ($record) {
                         $customerInfo = Customer::where('id',$record->customer_id)->first();
                         $items = OrderItem::with('productInfo')->where('order_id', $record->id)->get();
-                        return view('filament.pages.customer-table', ['records' => $items,'customer'=>$customerInfo]);
+                        return view('filament.pages.customer-table', ['records' => $items,'customer'=>$customerInfo,'record'=>$record]);
                     }),
                     Action::make('payment')->label('Pay')
                     ->hidden(fn ($record) => ($record->payment_status == 'pending' && $record->status == 'processing') ? false : true )
